@@ -326,6 +326,10 @@
   background: #fff;
 }
 
+.resume-mobile-prompt {
+  display: none;
+}
+
 .project-modal-body {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 210px;
@@ -682,5 +686,129 @@
 
   .play-chip {
     margin-top: .25rem;
+  }
+
+  .underground {
+    min-height: 0;
+    padding: 3rem 1rem 4rem;
+    overflow: hidden;
+  }
+
+  .underground::before {
+    height: 16px;
+  }
+
+  .ground-line,
+  .root-hub {
+    display: none;
+  }
+
+  .underground > .eyebrow,
+  .underground > h2 {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .underground > h2 {
+    margin: .75rem auto 2rem;
+    max-width: 11ch;
+    font-size: clamp(2.35rem, 13vw, 3.35rem);
+    line-height: .95;
+    letter-spacing: 0;
+    text-shadow: 4px 4px 0 var(--wood-dark);
+  }
+
+  .roots-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding-left: 0;
+    width: 100%;
+  }
+
+  .root-card,
+  .root-card:nth-child(2n) {
+    width: 100%;
+    margin: 0;
+    box-shadow: 7px 7px 0 #00000080;
+  }
+
+  .root-wire {
+    display: none;
+  }
+
+  .modal-overlay {
+    align-items: start;
+    padding: .75rem;
+    overflow-y: auto;
+  }
+
+  .media-modal {
+    width: min(100%, 420px);
+    max-height: none;
+    border-width: 3px;
+    box-shadow: 7px 7px 0 var(--blue);
+  }
+
+  .resume-modal {
+    margin: 1rem auto;
+  }
+
+  .resume-modal .modal-titlebar {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: .8rem;
+    padding: .9rem;
+  }
+
+  .resume-modal .modal-titlebar strong {
+    max-width: 100%;
+    font-size: clamp(.9rem, 5vw, 1.2rem);
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+  }
+
+  .resume-modal .modal-actions {
+    display: grid;
+    grid-template-columns: 1fr 44px;
+    gap: .65rem;
+    width: 100%;
+  }
+
+  .resume-modal .modal-download,
+  .resume-mobile-prompt .modal-download {
+    justify-content: center;
+    min-height: 44px;
+    font-size: .7rem;
+  }
+
+  .resume-modal .modal-titlebar button {
+    width: 44px;
+    height: 44px;
+  }
+
+  .resume-modal object {
+    display: none;
+  }
+
+  .resume-mobile-prompt {
+    background: #fff;
+    color: var(--ink);
+    display: grid;
+    gap: .85rem;
+    min-height: 260px;
+    padding: 1.25rem;
+    align-content: center;
+    text-align: center;
+  }
+
+  .resume-mobile-prompt strong {
+    font-size: 1.2rem;
+  }
+
+  .resume-mobile-prompt p {
+    color: #3d434d;
+    font-family: var(--font-geist-sans), Arial, sans-serif;
+    margin: 0;
+    line-height: 1.5;
   }
 }
