@@ -35,6 +35,70 @@
   font-size: .78rem;
 }
 
+.header-button.game-button {
+  min-width: 112px;
+  position: relative;
+  transform-origin: center bottom;
+  animation: game-button-bounce 2.25s steps(2, end) infinite;
+}
+
+.header-button.game-button::after {
+  content: "";
+  pointer-events: none;
+  border: 2px solid var(--yellow);
+  opacity: .55;
+  position: absolute;
+  inset: -7px;
+  animation: game-button-signal 2.25s steps(2, end) infinite;
+}
+
+.header-button.game-button:hover,
+.header-button.game-button:focus-visible {
+  animation-play-state: paused;
+  transform: translateY(-3px);
+}
+
+@keyframes game-button-bounce {
+  0%, 68%, 100% {
+    transform: translateY(0);
+    box-shadow: 4px 4px #8b2529;
+  }
+
+  74% {
+    transform: translateY(-7px);
+    box-shadow: 4px 11px #8b2529;
+  }
+
+  82% {
+    transform: translateY(0);
+    box-shadow: 4px 4px #8b2529;
+  }
+
+  88% {
+    transform: translateY(-3px);
+    box-shadow: 4px 7px #8b2529;
+  }
+}
+
+@keyframes game-button-signal {
+  0%, 62%, 100% {
+    opacity: 0;
+    transform: scale(.92);
+  }
+
+  70%, 86% {
+    opacity: .75;
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .header-button.game-button,
+  .header-button.game-button::after {
+    animation: none;
+  }
+}
+
 .domain-canopy {
   --orbit-radius: clamp(170px, 21vw, 235px);
   width: min(1120px, 94vw);
@@ -573,6 +637,11 @@
 }
 
 @media (max-width: 760px) {
+  .header-button.game-button {
+    font-size: .56rem;
+    padding: .55rem .68rem;
+  }
+
   .project-hero {
     min-height: auto;
     padding: 2.75rem 1rem 1.5rem;
