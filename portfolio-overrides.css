@@ -569,19 +569,118 @@
 }
 
 @media (max-width: 760px) {
+  .project-hero {
+    min-height: auto;
+    padding: 2.75rem 1rem 1.5rem;
+  }
+
+  .domain-canopy {
+    --orbit-radius: min(28vw, 112px);
+    width: min(100vw, 460px);
+    margin: 2rem auto 0;
+  }
+
   .canopy-trunk-bridge {
-    width: 46px;
-    height: 156px;
-    left: 13px;
-    bottom: -140px;
-    border-left-width: 7px;
-    border-right-width: 7px;
-    transform: none;
-    box-shadow: 8px 0 #00000047;
+    display: none;
   }
 
   .project-hero .scroll-cue {
-    align-self: flex-start;
-    margin-left: 34px;
+    display: none;
+  }
+
+  .journey {
+    width: 100%;
+    padding: 1rem 1rem 4rem;
+  }
+
+  .journey::before,
+  .project-row::before,
+  .branch-tip {
+    display: none;
+  }
+
+  .project-row {
+    min-height: 0;
+    padding: 0;
+    margin: 0 0 1.35rem;
+    display: block;
+  }
+
+  .project-card,
+  .side-left .project-card,
+  .side-right .project-card {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    box-shadow: 7px 7px 0 var(--blue);
+  }
+
+  .project-card:hover,
+  .project-card:focus-visible {
+    transform: none;
+    box-shadow: 7px 7px 0 var(--yellow);
+  }
+
+  .side-left .project-copy,
+  .side-right .project-copy {
+    border: 0;
+    border-bottom: 3px solid #f6f1df26;
+    order: 1;
+  }
+
+  .side-left .pixel-screen,
+  .side-right .pixel-screen {
+    order: 2;
+  }
+
+  .project-copy {
+    min-height: 0;
+    padding: 1.55rem 1.2rem 1.2rem;
+    text-align: left;
+  }
+
+  .project-number {
+    top: .65rem;
+    right: .85rem;
+    font-size: 2.2rem;
+  }
+
+  .project-copy h2 {
+    max-width: calc(100% - 3rem);
+    font-size: 1.18rem;
+  }
+
+  .project-copy ul {
+    gap: .4rem;
+  }
+
+  .project-copy li,
+  .private-note {
+    font-size: .54rem;
+  }
+
+  .pixel-screen {
+    min-height: 0;
+    padding: .85rem;
+  }
+
+  .screen-topbar {
+    gap: .5rem;
+    align-items: flex-start;
+    font-size: .48rem;
+  }
+
+  .screen-topbar span:first-child {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .project-thumb {
+    min-height: 132px;
+    max-height: 158px;
+  }
+
+  .play-chip {
+    margin-top: .25rem;
   }
 }
