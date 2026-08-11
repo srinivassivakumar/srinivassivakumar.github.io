@@ -567,3 +567,21 @@
     gap: .35rem;
   }
 }
+
+@media (max-width: 760px) {
+  .canopy-trunk-bridge {
+    width: 46px;
+    height: 156px;
+    left: 13px;
+    bottom: -140px;
+    border-left-width: 7px;
+    border-right-width: 7px;
+    transform: none;
+    box-shadow: 8px 0 #00000047;
+  }
+
+  .project-hero .scroll-cue {
+    align-self: flex-start;
+    margin-left: 34px;
+  }
+}
