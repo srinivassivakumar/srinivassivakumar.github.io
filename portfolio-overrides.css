@@ -450,6 +450,15 @@
 }
 
 @media (width <= 760px) {
+  .page-section {
+    scroll-margin-top: 124px;
+  }
+
+  .project-hero {
+    min-height: auto;
+    padding: 2.75rem 1rem 2.5rem;
+  }
+
   .notes-hero h1,
   .project-hero h1,
   .about-copy h1 {
@@ -477,7 +486,7 @@
     width: 100vw;
     height: auto;
     aspect-ratio: 16 / 9;
-    margin-top: 4rem;
+    margin-top: 2.25rem;
   }
 
   .domain-badge {
@@ -513,16 +522,24 @@
   }
 
   .canopy-trunk-bridge {
-    height: 110px;
-    bottom: -96px;
+    width: 46px;
+    height: 156px;
+    left: 13px;
+    bottom: -140px;
+    border-left-width: 7px;
+    border-right-width: 7px;
+    transform: none;
+    box-shadow: 8px 0 #00000047;
   }
 
   .journey {
-    padding-top: 1rem;
+    padding-top: 2rem;
   }
 
   .project-hero .scroll-cue {
-    margin-top: 3.25rem;
+    align-self: flex-start;
+    margin-top: 2rem;
+    margin-left: 34px;
   }
 
   .project-modal-body {
