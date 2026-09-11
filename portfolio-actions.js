@@ -142,7 +142,7 @@ const certificates = [
   {
     title: "Claude Academy Certificate",
     image: "ClaudeCertificate.jpg",
-    link: "Srinivas_Claude_Academy_LinkedIn_Carousel.pdf"
+    link: "ClaudeCertificate.jpg"
   }
 ];
 
@@ -375,7 +375,7 @@ function setupModals() {
       image.alt = cert.title;
       const certLink = document.querySelector("#certificateLink");
       certLink.href = cert.link;
-      certLink.textContent = cert.link.endsWith(".pdf") ? "OPEN CERTIFICATE PDF" : "OPEN LINKEDIN POST";
+      certLink.textContent = /^https?:\/\//.test(cert.link) ? "OPEN LINKEDIN POST" : "OPEN FULL IMAGE";
       openElement(certModal);
     }
 
