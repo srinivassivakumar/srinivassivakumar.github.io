@@ -138,6 +138,11 @@ const certificates = [
     title: "Design Patent",
     image: "patent.jpg",
     link: "https://www.linkedin.com/posts/activity-7426943511226281984-WGZH?utm_source=share&utm_medium=member_desktop&rcm=ACoAABuZalUBOmhUQf8D06av4T8A-c17vRTJV4c"
+  },
+  {
+    title: "Claude Academy Certificate",
+    image: "ClaudeCertificate.jpg",
+    link: "Srinivas_Claude_Academy_LinkedIn_Carousel.pdf"
   }
 ];
 
@@ -368,7 +373,9 @@ function setupModals() {
       const image = document.querySelector("#certificateImage");
       image.src = cert.image;
       image.alt = cert.title;
-      document.querySelector("#certificateLink").href = cert.link;
+      const certLink = document.querySelector("#certificateLink");
+      certLink.href = cert.link;
+      certLink.textContent = cert.link.endsWith(".pdf") ? "OPEN CERTIFICATE PDF" : "OPEN LINKEDIN POST";
       openElement(certModal);
     }
 
